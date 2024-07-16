@@ -1,0 +1,173 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 1200px;
+  overflow: auto;
+  padding: 60px;
+  
+  
+
+  .wrapper {
+    max-width: 800px;
+    min-width: 800px;
+    width: 100%;
+    border: 3px solid orange;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #08556d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      
+
+      h1 {
+        color: orange;
+        font-size: 37px;
+      }
+
+      p {
+        font-size: 18px;
+        color: gray;
+      }
+    }
+
+    .content {
+
+      .comment-list {
+        margin-bottom: 20px;
+
+        .commentaire {
+          margin: 10px 0;
+          padding: 10px;
+          border: 3px solid orange;
+          border-radius: 40px;
+          background-color: transparent;
+
+          h2 {
+            margin:0px 20px;
+            font-size: 34px;
+            color: orange;
+          }
+
+          p {
+            margin:0px 40px;
+            color: white;
+            font-size: 24px;
+          }
+
+          .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            
+
+            button {
+              padding: 10px;
+              border: gray;
+              border-radius: 10px;
+              cursor: pointer;
+              background-color: orange;
+              color: white;
+              margin: 0 5px;
+              font-size: 20px;
+
+              &:hover {
+                background-color: gray;
+                color: orange;
+              }
+            }
+          }
+        }
+      }
+
+      .empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+        color: gray;
+        font-size: 24px;
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+
+        button {
+          padding: 10px;
+          border: gray;
+          border-radius: 10px;
+          cursor: pointer;
+          background-color: orange;
+          color: white;
+          margin: 0 5px;
+          font-size: 24px;
+
+          &:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+          }
+
+          &:hover:not(:disabled) {
+            background-color: darkorange;
+          }
+        }
+
+        span {
+          align-self: center;
+          margin: 0 10px;
+          font-size: 18px;
+        }
+      }
+
+      .nouveau-commentaire {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input,
+        textarea {
+          padding: 10px;
+          border: 3px solid orange;
+          background-color: transparent;
+          border-radius: 20px;
+          width: 100%;
+          resize: none;
+          color: white;
+          font-size: 30px;
+        }
+
+        button {
+          padding: 10px;
+          background-color: orange;
+          border: none;
+          border-radius: 20px;
+          color: white;
+          cursor: pointer;
+          font-size: 30px;
+
+          &:hover {
+            background-color: darkorange;
+          }
+        }
+      }
+
+      .editable-textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 20px;
+        background-color: transparent;
+        color: white;
+        resize: none;
+      }
+    }
+  }
+}
